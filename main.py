@@ -31,19 +31,20 @@ def predict_crash():
     # Show the prediction result
     messagebox.showinfo('Prediction Result', f'Prediction: {result}')
 
-    label = tk.Label(window, text='Enter flight details:')
-    label.pack()
+# Create the window and the widgets outside the function
+label = tk.Label(window, text='Enter flight details:')
+label.pack()
 
-    entry_fields = []
-      
-    for feature in features:
-        entry_label = tk.Label(window, text=feature)
-        entry_label.pack()
-        entry = tk.Entry(window)
-        entry.pack()
-        entry_fields.append(entry)
+entry_fields = []
+  
+for feature in features:
+    entry_label = tk.Label(window, text=feature)
+    entry_label.pack()
+    entry = tk.Entry(window)
+    entry.pack()
+    entry_fields.append(entry)
 
-    predict_button = tk.Button(window, text='Predict', command=predict_crash)
-    predict_button.pack()
+predict_button = tk.Button(window, text='Predict', command=predict_crash)
+predict_button.pack()
 
-    window.mainloop()
+window.mainloop()
