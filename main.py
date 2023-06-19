@@ -47,3 +47,5 @@ def predict_crash():
     predict_button.pack()
 
     window.mainloop()
+
+predict_crash()
