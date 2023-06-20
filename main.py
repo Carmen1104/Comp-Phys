@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 data = pd.read_csv('data/airplane-accident-severity.csv')
 
-features = ['Safety Score', 'Days Since Inspection', 'Control Metric', 'Turbulence In gforces', 'Cabin Temperature', 'Accident Type Code', 'Max Elevaion', 'Violations', 'Adverse Weather Metric']
+features = ['Safety Score', 'Days Since Inspection', 'Safety Complain', 'Control Metric', 'Turbulence In gforces', 'Cabin Temperature', 'Accident Type Code', 'Max Elevaion', 'Violations', 'Adverse Weather Metric']
 X=data.drop(['Severity', 'Accident_ID'],axis=1)
 y=data.Severity
 
@@ -19,7 +19,7 @@ classifier.fit(X_train, y_train)
 
 window = tk.Tk()
 window.title('Plane Crash Prediction')
-window.geometry('800x200')
+window.geometry('800x600')
 
 def predict_crash():
     # Get the input values from the text entry fields
